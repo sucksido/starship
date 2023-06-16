@@ -1,0 +1,42 @@
+<!-- starship-list.component.html -->
+<div class="starship-list-container" *ngIf="starships">
+  <h2>Starship List</h2>
+  <div class="starship-card" *ngFor="let starship of starships">
+    <img class="starship-image" [src]="starship.imageUrl" alt="Starship Image">
+    <div class="starship-details">
+      <h3 class="starship-name">{{ starship.name }}</h3>
+      <p class="starship-price">Price: {{ starship.price }}</p>
+    </div>
+    <button class="add-to-cart-button" (click)="addToCart(starship)">Add to Cart</button>
+  </div>
+</div>
+
+<style>
+  .starship-list-container {
+    /* Add your container styles here */
+  }
+
+  .starship-card {
+    /* Add your card styles here */
+  }
+
+  .starship-image {
+    /* Add your image styles here */
+  }
+
+  .starship-details {
+    /* Add your details styles here */
+  }
+
+  .starship-name {
+    /* Add your name styles here */
+  }
+
+  .starship-price {
+    /* Add your price styles here */
+  }
+
+  .add-to-cart-button {
+    /* Add your button styles here */
+  }
+</style>
